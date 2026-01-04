@@ -1,0 +1,50 @@
+:root {
+    --rosa: #F7A8A0;
+    --rosso: #C94F4F;   
+    --bianco: #FFF3E6;
+    --marrone: #6E4B3A;
+    --verde: #A8C686;
+}
+
+.bg-custom {
+    background-image: url('../../public/media/bg.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.bg-marrone{
+    background-color: var(--marrone);
+}
+
+.bg-bianco{
+    background-color: var(--bianco);
+}
+
+.text-marrone{
+    color: var(--marrone);
+}
+
+.text-bianco{
+    color: var(--bianco);
+}
+
+.title {
+    color: var(--bianco);
+    text-shadow: 5px 2px var(--rosso);
+    font-weight: 500;
+}
+
+.subtitle {
+    color: var(--bianco);
+    text-shadow: 1px 1px var(--verde);
+}
+
+.height-custom{
+    height: 40vh;
+}
+
+.box-bg{
+    background-color: var(--rosso);
+    color: var(--bianco);
+}
