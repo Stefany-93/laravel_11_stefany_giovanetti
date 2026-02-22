@@ -15,3 +15,9 @@ Route::get('/thank-you', [PublicController::class, 'thankYou'])->name('thankYou.
 Route::get('/panini', [MenuController::class, 'panini'])->name('menu');
 
 Route::get('/panini/dettaglio/{id}', [MenuController::class, 'dettaglio'])->name('sandwich.detail');
+
+Route::get('/crea', [PublicController::class, 'crea'])->name('crea');
+
+Route::post('/crea', [PublicController::class, 'creaPanino'])->name('crea.panino');
+
+Route::get('/panini/index', [PublicController::class, 'index'])->name('panini.index');

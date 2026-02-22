@@ -5,10 +5,14 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Mail extends Model
+class Panino extends Model
 {
     use HasFactory;
+
+    protected $table = 'panino';
+
     protected $fillable = [
-        'name'
+        'name',
+        'description'
     ];
 }

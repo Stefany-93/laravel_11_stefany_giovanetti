@@ -13,6 +13,12 @@
                     <a class="nav-link text-marrone" href="{{route('menu')}}">Menù</a>
                 </li>
                 <li class="nav-item">
+                    <a class="nav-link text-marrone" href="{{route('crea')}}">Crea il tuo panino</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-marrone" href="{{route('panini.index')}}">I tuoi panini</a>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link text-marrone" href="{{route('contact.us')}}">Contattaci</a>
                 </li>
             </ul>
