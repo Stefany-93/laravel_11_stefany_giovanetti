@@ -59,6 +59,12 @@
     border-radius: 20px;
 }
 
+.sandwich-custom{
+    width: 286px;
+    height: 240px;
+    object-fit: cover;
+}
+
 @media (max-width: 768px) {
     .img-panino {
         width: 90%;
