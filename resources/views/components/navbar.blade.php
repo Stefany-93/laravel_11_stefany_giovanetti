@@ -10,13 +10,13 @@
                     <a class="nav-link text-marrone" aria-current="page" href="{{route('home')}}">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-marrone" href="{{route('menu')}}">Menù</a>
+                    <a class="nav-link text-marrone" href="{{route('panini.index')}}">Menù</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link text-marrone" href="{{route('crea')}}">Crea il tuo panino</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-marrone" href="{{route('panini.index')}}">I tuoi panini</a>
+                    <a class="nav-link text-marrone" href="{{route('panini.store')}}">I tuoi panini</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link text-marrone" href="{{route('contact.us')}}">Contattaci</a>

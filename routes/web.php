@@ -14,12 +14,12 @@ Route::post('/contattaci/submit', [SubmitController::class, 'submit'])->name('co
 
 Route::get('/thank-you', [SubmitController::class, 'thankYou'])->name('thankYou.page');
 
-Route::get('/panini', [MenuController::class, 'panini'])->name('menu');
+Route::get('/index', [MenuController::class, 'panini'])->name('panini.index');
 
-Route::get('/panini/dettaglio/{id}', [MenuController::class, 'dettaglio'])->name('sandwich.detail');
+Route::get('/panini/show/{id}', [MenuController::class, 'show'])->name('panini.show');
 
-Route::get('/crea', [CreaController::class, 'crea'])->name('crea');
+Route::get('/create', [CreaController::class, 'crea'])->name('crea');
 
-Route::post('/crea', [CreaController::class, 'creaPanino'])->name('crea.panino');
+Route::post('/create', [CreaController::class, 'creaPanino'])->name('crea.panino');
 
-Route::get('/panini/index', [CreaController::class, 'index'])->name('panini.index');
+Route::get('/store', [CreaController::class, 'store'])->name('panini.store');

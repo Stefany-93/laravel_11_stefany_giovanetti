@@ -2,7 +2,6 @@
 
 use App\Http\Requests\PaninoRequest;
 use Illuminate\Foundation\Application;
-use Illuminate\Http\Request;
 
 define('LARAVEL_START', microtime(true));
 

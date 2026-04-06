@@ -14,7 +14,4 @@ class PublicController extends Controller
                 return view('contattaci');
         }
 
-        public function menu(){
-                return view('menu');
-        } 
 }

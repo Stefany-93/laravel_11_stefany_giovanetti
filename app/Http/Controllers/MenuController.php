@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
 class MenuController extends Controller
 {
@@ -18,13 +18,13 @@ class MenuController extends Controller
     ];
 
     public function panini(){
-        return view('panini', ['sandwiches' => $this->arraySandwiches]);
+        return view('panini.index', ['sandwiches' => $this->arraySandwiches]);
     }
 
-    public function dettaglio($id){
+    public function show($id){
         foreach($this->arraySandwiches as $sandwich){
             if($id == $sandwich['id']){
-                return view('panini/sandwichDetail', ['sandwich' => $sandwich]);
+                return view('panini/show', ['sandwich' => $sandwich]);
             }
         }
     }

@@ -2,18 +2,15 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Controllers\Controller;
 use App\Http\Requests\PaninoRequest;
 use App\Models\Panino;
 
 
 class CreaController extends Controller
 {
-        public function __construct(){
-                $this->middleware('auth')->except('crea');
-        }
-
         public function crea(){
-                return view('crea');
+                return view('panini.create');
         }
 
         // public function creaPanino(PaninoRequest $request) {
@@ -28,24 +25,24 @@ class CreaController extends Controller
         //         }
         //         $panino->save();
 
-        //         return redirect()->route('panini.index');
+        //         return redirect()->route('panini.store');
         // }
         public function creaPanino(PaninoRequest $request){
                 $imgPath = $request->hasFile('img')
                 ? $request->file('img')->store('images', 'public')
                 : 'images/no-img.png';
-                Panino::create([
+                Panino::crea([
                         'name' => $request->name,
                         'description' => $request->description,
                         'img' => $imgPath
                 ]);
-                return redirect()->route('panini.index');
+                return redirect()->route('panini.store');
         }
 
-        public function index(){
+        public function store(){
 
                 $paninos = Panino::all();
-                return view('panini.index', ['paninos'=> $paninos]);
+                return view('panini.store', ['paninos'=> $paninos]);
         }
 
 }
