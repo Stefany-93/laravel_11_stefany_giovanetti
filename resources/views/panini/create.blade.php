@@ -8,16 +8,7 @@
         </div>
         <div class="row justify-content-center">
             <div class="col-12 col-md-6">
-                @if ($errors->any())
-                    <div class="alert alert-danger">
-                    <ul>
-                        @foreach ($errors->all() as $error)
-                            <li>{{ $error }}</li>
-                        @endforeach
-                    </ul>
-                </div>
-                @endif
-                <form class="py-3 px-5 box-bg shadow rounded" method="POST" action="{{route('crea.panino')}}" enctype="multipart/form-data">
+                <form class="py-3 px-5 box-bg shadow rounded" method="POST" action="{{route('panini.submit')}}" enctype="multipart/form-data">
                     @csrf
                     <div class="mb-3">
                         <label for="name" class="form-label">Inserisci il nome del tuo panino</label>

@@ -9,18 +9,17 @@
             </div>
         </div>
         <div class="row justify-content-center align-items-center bg-bianco min-vh-100">
-            @foreach ($sandwiches as $sandwich)
+            @forelse($panini as $panino)
                 <div class="col-12 col-md-3 py-5">
-                    <x-card
-                        :sandwich="$sandwich"
-                        name="{{$sandwich['name']}}"
-                        id="{{$sandwich['id']}}"
-                        description="{{$sandwich['description']}}"
-                        img="{{$sandwich['img']}}"
-                        >
-                    </x-card>
-                </div> 
-            @endforeach
+                    <x-card :panino="$panino" />
+                </div>
+            @empty
+            <div class="col-12 d-flex justify-content-center">
+                <h2>
+                    NESSUN PANINO PRESENTE NEL MENU
+                </h2>
+            </div>
+            @endforelse
         </div>
     </div>
 

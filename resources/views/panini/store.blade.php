@@ -4,12 +4,12 @@
         <div class="row h-75 justify-content-center align-items-center">
             <div class="col-12 mt-1 px-0 py-0 bg-bianco">
                 <h1 class="text-center display-4 shadow text-marrone bg-rosa">
-                    I TUOI PANINI
+                    I PANINI
                 </h1>
             </div>
         </div>
         <div class="row justify-content-center align-items-center bg-bianco min-vh-100">
-            @foreach ($paninos as $panino)
+            @foreach ($panini as $panino)
                 <div class="col-12 col-md-3 py-5">
                     <div class="card mx-auto card-custom" style="width: 18rem;">
                         <img src="{{Storage::url($panino->img)}}" class="img-custom sandwich-custom" alt="...">
