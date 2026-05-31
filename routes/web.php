@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\CreaController;
+use App\Http\Controllers\SandwichController;
 use App\Http\Controllers\PublicController;
 use App\Http\Controllers\SubmitController;
 use Illuminate\Support\Facades\Route;
@@ -13,13 +13,18 @@ Route::post('/contattaci/submit', [SubmitController::class, 'submit'])->name('co
 
 Route::get('/thank-you', [SubmitController::class, 'thankYou'])->name('thankYou.page');
 
-Route::get('/panini/index', [PublicController::class, 'index'])->name('panini.index');
+Route::get('/sandwich/index', [SandwichController::class, 'index'])->name('sandwich.index');
 
-Route::get('/panini/show/{panino}', [PublicController::class, 'show'])->name('panini.show');
+Route::get('/sandwich/show/{sandwich}', [SandwichController::class, 'show'])->name('sandwich.show');
 
-Route::get('/panini/create', [CreaController::class, 'create'])->name('panini.create');
+Route::get('/sandwich/create', [SandwichController::class, 'create'])->name('sandwich.create');
 
-Route::post('/panini/create/submit', [CreaController::class, 'store'])->name('panini.submit');
+Route::post('/sandwich/create/submit', [SandwichController::class, 'store'])->name('sandwich.submit');
 
-Route::get('/store', [CreaController::class, 'store'])->name('panini.store');
+Route::get('/sandwich/edit/{sandwich}', [SandwichController::class, 'edit'])->name('sandwich.edit');
 
+Route::put('/sandwich/update/{sandwich}', [SandwichController::class, 'update'])->name('sandwich.update');
+
+Route::delete('/sandwich/delete/{sandwich}', [SandwichController::class, 'destroy'])->name('sandwich.delete');
+
+Route::get('/user/profile', [SandwichController::class, 'profile'])->name('user.profile');

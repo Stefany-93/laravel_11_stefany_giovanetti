@@ -9,19 +9,21 @@
                 <li class="nav-item">
                     <a class="nav-link text-marrone" aria-current="page" href="{{route('home')}}">Home</a>
                 </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Panini
-                    </a>
-                    <ul class="dropdown-menu">
-                        <li>
-                            <a class="dropdown-item" href="{{route('panini.create')}}">Crea il tuo panino</a>
-                        </li>
-                        <li>
-                            <a class="dropdown-item" href="{{route('panini.index')}}">Tutti i panini</a>
-                        </li>
-                    </ul>
-                </li>
+                @auth
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Panini
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a class="dropdown-item" href="{{route('sandwich.create')}}">Crea il tuo panino</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="{{route('sandwich.index')}}">Tutti i panini</a>
+                            </li>
+                        </ul>
+                    </li>
+                @endauth
                 <li class="nav-item">
                     <a class="nav-link text-marrone" href="{{route('contact.us')}}">Contattaci</a>
                 </li>

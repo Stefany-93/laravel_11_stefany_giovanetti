@@ -6,11 +6,11 @@ use App\Models\User;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Panino extends Model
+class Sandwich extends Model
 {
     use HasFactory;
 
-    protected $table = 'panino';
+    protected $table = 'sandwiches';
 
     protected $fillable = [
         'name',

@@ -9,9 +9,9 @@
             </div>
         </div>
         <div class="row justify-content-center align-items-center bg-bianco min-vh-100">
-            @forelse($panini as $panino)
+            @forelse($sandwiches as $sandwich)
                 <div class="col-12 col-md-3 py-5">
-                    <x-card :panino="$panino" />
+                    <x-card :sandwich="$sandwich" />
                 </div>
             @empty
             <div class="col-12 d-flex justify-content-center">

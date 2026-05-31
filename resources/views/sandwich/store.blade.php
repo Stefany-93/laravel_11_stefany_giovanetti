@@ -9,13 +9,13 @@
             </div>
         </div>
         <div class="row justify-content-center align-items-center bg-bianco min-vh-100">
-            @foreach ($panini as $panino)
+            @foreach ($sandwiches as $sandwich)
                 <div class="col-12 col-md-3 py-5">
                     <div class="card mx-auto card-custom" style="width: 18rem;">
-                        <img src="{{Storage::url($panino->img)}}" class="img-custom sandwich-custom" alt="...">
+                        <img src="{{Storage::url($sandwich->img)}}" class="img-custom sandwich-custom" alt="...">
                             <div class="card-body bg-rosa text-marrone">
-                                <h5 class="card-title">{{$panino->name}}</h5>
-                                <p class="card-text">{{$panino->description}}</p>
+                                <h5 class="card-title">{{$sandwich->name}}</h5>
+                                <p class="card-text">{{$sandwich->description}}</p>
                             </div>
                     </div>
                 </div>
