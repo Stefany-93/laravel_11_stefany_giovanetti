@@ -1,5 +1,5 @@
 <div class="card mx-auto card-custom" style="width: 18rem;">
-    <img src="{{ Storage::url($sandwich->img) }}" alt="Panino {{ $sandwich->name }}" class="img-panino">
+    <img src="{{ asset('storage/' . $sandwich->img) }}" alt="Panino {{ $sandwich->name }}" class="img-panino">
     <div class="card-body bg-rosa text-marrone">
         <h5 class="card-title">{{ $sandwich->name }}</h5>
         <p>Creato da: {{ $sandwich->user->name }}</p>
